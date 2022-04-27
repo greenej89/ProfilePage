@@ -39,7 +39,7 @@
                         <img src="./assets/jane-m.jpg" alt="photo of Jane" class="avatar" id="avatar-jane-doe">
                     </div>
                     <div class="card-body">
-                        <h2>Jane Doe</h2>
+                        <h2 id="user-name">Jane Doe</h2>
                         <p class="location">
                             <img src="./assets/map-marker.png" alt="map marker icon" class="icon">  Seattle
                         </p>
@@ -49,11 +49,12 @@
                         </p>
                         <p class="edit-profile">
                             <img src="./assets/gear.png" alt="gear icon" class="icon">
-                            <a href="#">  edit profile</a>
+                            <a href="#" onclick="changeName(this)">  edit profile</a>
                         </p>
                     </div>
                 </div>
                 <!-- Education -->
+                <div class="education">
                     <!-- Education header -->
                     <div class="content-header">
                         <h3>Education</h3>
@@ -64,73 +65,65 @@
                         <p class="resume-dates">Dec 2019 - Mar 2020</p>
                         <p>Triple black belt in Python, MERN, and C#...</p>
                     </div>
+                </div>
             </div>
 
             <!-- Column 2 -->
             <div class="col-2">
                 <!-- Connection Requests -->
-                <div class="connections connection-requests">
+                <div class="connection-requests">
                     <!-- Connection Request Header -->
                     <div class="content-header">
-                        <div class="friend-counter">2</div>
+                        <div id="request-counter" class="friend-counter">2</div>
                         <h3>Connection Requests</h3>
                     </div>
-                    <!-- List of Connection Request Users -->
-                    <div class="connections-list">
-                        <ul class="connection-names">
-                            <li> 
+                    <ul class="request-names">
+                        <li id="request-1"> 
+                            <span>
                                 <img src="./assets/todd-s.jpg" alt="picture of Todd" class="avatar"> 
                                 Todd E
-                            </li>
-                            <li> 
+                            </span>
+                            <span>
+                                <img src="./assets/accept-circle.png" alt="accept circle" class="accept-close" onclick='removeRequest("#request-1"); increaseConnectionCount()'>
+                                <img src="./assets/close-circle.png" alt="close circle" class="accept-close" onclick='removeRequest("#request-1")'> 
+                            </span>
+                        </li>
+                        <li id="request-2"> 
+                            <span>
                                 <img src="./assets/phil-s.jpg" alt="picture of Phil" class="avatar"> 
                                 Phil K
-                            </li>
-                        </ul>
-                        <ul class="accept-close">
-                            <li>
-                                <img src="./assets/accept-circle.png" alt="accept circle" class="accept-close">
-                                <img src="./assets/close-circle.png" alt="close circle" class="accept-close"> 
-                            </li>
-                            <li>
-                                <img src="./assets/accept-circle.png" alt="accept circle" class="accept-close">
-                                <img src="./assets/close-circle.png" alt="close circle" class="accept-close"> 
-                            </li>
-                        </ul>
-                    </div>
+                            </span>
+                            <span>
+                                <img src="./assets/accept-circle.png" alt="accept circle" class="accept-close" onclick='removeRequest("#request-2"); increaseConnectionCount()'>
+                                <img src="./assets/close-circle.png" alt="close circle" class="accept-close" onclick='removeRequest("#request-2")'> 
+                            </span>
+                        </li>
+                    </ul>
                 </div>
+            <!-- </div> -->
+
 
                 <!-- Your Connections -->
                 <div class="connections">
                     <!-- Your Connections Header -->
                     <div class="content-header">
-                        <div class="friend-counter">500+</div>
+                        <div id="connection-counter" class="friend-counter">418</div>
                         <h3>Your Connections</h3>
                     </div>
                     <!-- List of Your Connections Users-->
                     <div class="connections-list" id="your-connections">
                         <ul class="connection-names">
-                            <li> <img src="./assets/adrien-s.jpg" alt="picture of Adrien" class="avatar"> Adrien D</li>
-                            <li> <img src="./assets/anne-s.jpg" alt="picture of Anne" class="avatar"> Anne J</li>
-                            <li> <img src="./assets/alayne-s.jpg" alt="picture of Alayne" class="avatar"> Alayne T</li>
-                            <li> <img src="./assets/arry-s.jpg" alt="picture of Arry" class="avatar"> Arry Y</li>
-                        </ul>
-                        <ul class="accept-close">
-                            <li>
-                                <img src="./assets/accept-circle.png" alt="accept circle" class="accept-close">
-                                <img src="./assets/close-circle.png" alt="close circle" class="accept-close"> 
+                            <li> 
+                                <img src="./assets/adrien-s.jpg" alt="picture of Adrien" class="avatar"> Adrien D
                             </li>
-                            <li>
-                                <img src="./assets/accept-circle.png" alt="accept circle" class="accept-close">
-                                <img src="./assets/close-circle.png" alt="close circle" class="accept-close"> 
+                            <li> 
+                                <img src="./assets/anne-s.jpg" alt="picture of Anne" class="avatar"> Anne J
                             </li>
-                            <li>
-                                <img src="./assets/accept-circle.png" alt="accept circle" class="accept-close">
-                                <img src="./assets/close-circle.png" alt="close circle" class="accept-close"> 
+                            <li> 
+                                <img src="./assets/alayne-s.jpg" alt="picture of Alayne" class="avatar"> Alayne T
                             </li>
-                            <li>
-                                <img src="./assets/accept-circle.png" alt="accept circle" class="accept-close">
-                                <img src="./assets/close-circle.png" alt="close circle" class="accept-close"> 
+                            <li> 
+                                <img src="./assets/arry-s.jpg" alt="picture of Arry" class="avatar"> Arry Y
                             </li>
                         </ul>
                     </div>

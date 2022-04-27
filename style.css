@@ -20,8 +20,8 @@
 .col-1 {
     flex: 2;
     margin-right: 20px;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
 }
 /* Create column 2 */
 .col-2 {
@@ -96,14 +96,13 @@ button {
 
 /* GENERAL FORMATTING */
 /* Add uniform margins for all direct descendants of content boxes */
-.card-header *, .card-body > *, .education-body > * {
+.card-header *, .card-body > *, .education-body * {
     margin: 10px;
 }
-/* Add partial gray boxes around body of content boxes */
-.card-body, .education-body, .connections-list, #view-more {
+/* Add gray boxes around body of content boxes */
+.user-card, .education, .connection-requests, .connections {
     background-color: white;
     border: 3px solid #cccccc;
-    border-top: 0px;
     margin-bottom: 20px;
 }
 /* Change color of all anchors in content body sections to match gear icon*/
@@ -142,7 +141,7 @@ h3 {
 /* Format user card body padding and margins */
 .card-body {
     padding-top: 40px;
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
 }
 /* Position and add border to user card avatar */
 .user-card .avatar {
@@ -183,25 +182,32 @@ h3 {
 }
 /* Add white space between  connection requests and your connections*/
 .connection-requests {
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
 }
 /* Format connection avatars */
-.connections-list img {
+.connection-names img, .request-names img {
     height: 25px;
     width: 25px;
     border-radius: 50%;
 }
-/* Create connection list columns and set connection name font size */
-.connections-list {
+
+.connection-names li, .request-names li  {
+    display: flex;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.request-names li {
+    justify-content: space-between;
+}
+
+
+.request-names span {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
+    align-items: center;
 }
-/* Create uniform rows in the connection lists */
-.connections-list li, .accept-close li {
-    height: 25px;
-    margin: 10px;
-}
+
 /* Remove white space above view-more box */
 #your-connections {
     margin-bottom: 0px;
@@ -210,4 +216,5 @@ h3 {
 #view-more {
     padding: 10px;
     font-size: 14;
+    border-top: 3px solid #cccccc;
 }
