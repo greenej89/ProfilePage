@@ -1,0 +1,213 @@
+/* Reset browser */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* WEBPAGE LAYOUT */
+/* Format nav bar color, size, padding */
+.nav {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 55px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* Creat column 1 */
+.col-1 {
+    flex: 2;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+/* Create column 2 */
+.col-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+/* Add space between content and nav bar */
+.profile-body {
+    padding-top: 20px; 
+}
+/* Center and justify all content on webpage */
+.nav-content, .profile-body {
+    display: flex;
+    margin: 0px 15%;
+    justify-content: space-between;
+    min-width: 570px;
+}
+/* Remove bullets from all unodered lists */
+ul {
+    list-style: none;
+}
+/*Vertically center all list items connection avatars with connection names*/
+li {
+    display: flex;
+    align-items: center;
+    }
+/* Change standard font size */
+p {
+    font-size: 14px;
+}
+
+/* NAV BAR */
+/* Vertically align nav bar profile title, nav links, and sign out button*/
+.nav * {
+    align-items: center;
+}
+/* Change size of profile title */
+h1 {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+/* Format nav bar box containing profile title and links */
+.profile-links {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+/* Set width, set flex, and justify nav bar links */
+.nav ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+/* Remove formating from nav bar links and change color */
+.nav a {
+    text-decoration: none;
+    color: #cccccc;
+}
+/* Format active links */
+.nav a.active-link {
+    color: white
+}
+/* Format nav bar buttons */
+button {
+    background-color: #14a2b8;
+    color: white;
+    border: 0px;
+    width: 60px;
+    height: 20px;
+}
+
+/* GENERAL FORMATTING */
+/* Add uniform margins for all direct descendants of content boxes */
+.card-header *, .card-body > *, .education-body > * {
+    margin: 10px;
+}
+/* Add partial gray boxes around body of content boxes */
+.card-body, .education-body, .connections-list, #view-more {
+    background-color: white;
+    border: 3px solid #cccccc;
+    border-top: 0px;
+    margin-bottom: 20px;
+}
+/* Change color of all anchors in content body sections to match gear icon*/
+.profile-body a {
+    color: #2b77e4;
+}
+/* Create round images and add white background */
+.avatar, .accept-close {
+    background-color: white;
+    border-radius: 50%;
+}
+/* Format profile content body headers */
+.content-header {
+    height: 40px;
+    background-color: #333333;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+h3 {
+    font-size: 12px;
+}
+/* Add margin to profile content body headers */
+.content-header * {
+    margin-left: 10px;
+}
+
+/* USER CARD FORMATTING */
+/* Format user card header color, height, width */
+.card-header {
+    background-color: #14a2b8;
+    height: 70px;
+    width: 100%;
+}
+/* Format user card body padding and margins */
+.card-body {
+    padding-top: 40px;
+    /* margin-bottom: 20px; */
+}
+/* Position and add border to user card avatar */
+.user-card .avatar {
+    margin-top: 30px;
+    height: 90px;
+    width: 90px;
+    padding: 1%;
+    border: 4px solid #cccccc;
+
+}
+/* Set size of user card icons */
+.user-card .icon {
+    height: 16px;
+}
+/* Align edit profile icon with text */
+.edit-profile > *{
+    display: inline;
+    vertical-align: middle;
+}
+
+/* EDUCATION FORMATTING */
+/* Change education resume datese to gray */
+.resume-dates {
+    color: #868686;
+}
+
+/* CONNECTION LIST FORMATTING */
+/* Format connection counter shape, color, size, and font */
+.friend-counter {
+    background-color: #cccccc;
+    color: black;
+    height: 25px;
+    min-width: 25px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    padding: 4px;
+}
+/* Add white space between  connection requests and your connections*/
+.connection-requests {
+    /* margin-bottom: 20px; */
+}
+/* Format connection avatars */
+.connections-list img {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+/* Create connection list columns and set connection name font size */
+.connections-list {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+/* Create uniform rows in the connection lists */
+.connections-list li, .accept-close li {
+    height: 25px;
+    margin: 10px;
+}
+/* Remove white space above view-more box */
+#your-connections {
+    margin-bottom: 0px;
+}
+/* View more formatting */
+#view-more {
+    padding: 10px;
+    font-size: 14;
+}
